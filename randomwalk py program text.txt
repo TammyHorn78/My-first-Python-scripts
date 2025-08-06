@@ -1,0 +1,34 @@
+"""
+File: randomwalk.py
+
+A turtle takes a random walk.
+"""
+
+from turtle import Turtle
+import random
+
+def randomWalk(t, turns, distance = 20):
+   
+
+    for count in range(turns):
+        degrees = random.randint(0, 270)
+        
+
+
+            t.left(degrees)
+        else:
+         
+        
+
+
+
+
+def main():
+    t = Turtle()
+    t.shape("turtle")
+    
+
+
+
+
+    main()

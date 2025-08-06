@@ -1,0 +1,44 @@
+                                                                          """
+
+images.py
+
+Revised for Python 3.2, 2011.
+
+This module, writtn by Kenneth Lambert, supports simple image processing.  
+The Image class represents either an image loaded from a GIF file or a 
+blank image.  
+
+To instantiate an image from a file, enter
+
+image = Image(aGifFileName)                   
+
+To instantiate a blank image, enter
+
+image = Image(aWidth, aHeight)
+
+Image methods:
+
+draw()                          Displays the image in a window 
+getWidth()  -> anInt            The width in pixels
+getHeight() -> anInt            The height in pixels
+getPixel(x, y)  -> (r, g, b)    The RGB values of pixel at x, y
+setPixel(x, y, (r, g, b))       Resets pixel at x, y to (r, g, b)
+save()                          Saves the image to the current file name
+save(aFileName)                 Saves the image to fileName
+
+LICENSE: This is open-source software released under the terms of the
+GPL (http://www.gnu.org/licenses/gpl.html).
+"""
+def grayscale(image):
+	for y in range(image.getHeight()):
+		for x in range(image.getWidth()):
+		(r, g, b) = image.getPixel(x, y)
+		r = int(r * 0.299)
+		g = int(g * 0.587)
+		b = int(b * 0.114)
+		lum = r + g + b
+		image.setPixel(x, y, (lum, lum, lum))
+
+  
+C:\Users\student\AppData\Local\Programs\Python\Python313
+   
